@@ -1,0 +1,11 @@
+import org.teachingextensions.logo.utils.EventUtils.MessageBox;
+
+import com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
+
+public class SayHelloTKP
+{
+  public static void main(String[] args)
+  {
+    MessageBox.showMessage("Hello, World!");
+  }
+}

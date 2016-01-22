@@ -1,0 +1,13 @@
+package org.teachingkidsprogramming.CodingChallenges;
+
+import java.util.Scanner;
+
+public class AskName
+{
+  public static void main(String[] args)
+  {
+    String msg = "What's your name?";
+    System.out.print(msg);
+    System.in.read();
+  }
+}

@@ -1,5 +1,9 @@
 package org.teachingkidsprogramming.section04mastery;
 
+import org.teachingextensions.logo.Tortoise;
+import org.teachingextensions.logo.utils.ColorUtils.ColorWheel;
+import org.teachingextensions.logo.utils.ColorUtils.PenColors.Greens;
+import org.teachingextensions.logo.utils.ColorUtils.PenColors.Reds;
 import org.teachingkidsprogramming.recipes.quizzes.graders.PentagonCrazyQuizGrader;
 import org.teachingkidsprogramming.recipes.quizzes.graders.PentagonQuizAdapter;
 
@@ -11,12 +15,21 @@ public class PentagonCrazyQuiz extends PentagonQuizAdapter
     //   createAStitch (recipe below) 
     //   ------------- Recipe for createAStitch
     //   Move the tortoise 6 pixels
+    createAStitch();
     //   ------------- End of createAStitch recipe
+  }
+  private void createAStitch()
+  {
+    Tortoise.move(6);
   }
   @Override
   public void question2()
   {
     //        Do the following 76 times
+    for (int i = 0; i < 76; i++)
+    {
+      sewAStitch();
+    }
     //        Call sewAStitch
     //        Repeat
   }
@@ -24,11 +37,13 @@ public class PentagonCrazyQuiz extends PentagonQuizAdapter
   public void question3()
   {
     //        Add lime to the color wheel
+    ColorWheel.addColor(Greens.Lime);
   }
   @Override
   public void question4()
   {
     //        Add red to the color wheel
+    ColorWheel.addColor(Reds.Red);
   }
   public static void main(String[] args)
   {

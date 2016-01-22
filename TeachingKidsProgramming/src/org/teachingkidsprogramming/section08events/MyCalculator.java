@@ -1,0 +1,72 @@
+package org.teachingkidsprogramming.section08events;
+
+import org.teachingextensions.logo.utils.EventUtils.MessageBox;
+
+public class MyCalculator
+{
+  public static void main(String[] args)
+  {
+    int num1 = MessageBox.askForNumericalInput("Please enter the first number.");
+    MessageBox.showMessage("You entered " + num1);
+    int num2 = MessageBox.askForNumericalInput("Please enter the second number.");
+    MessageBox.showMessage("You entered " + num2);
+    String operator = MessageBox.askForTextInput("Enter symbol for operation: ");
+    if (operator.equals("+"))
+    {
+      int sum = add(num1, num2);
+      MessageBox.showMessage("The sum of your  numbers is:" + sum);
+    }
+    else if (operator.equals("-"))
+    {
+      int difference = subtract(num1, num2);
+      MessageBox.showMessage("The difference of your  numbers is:" + difference);
+    }
+    else if (operator.equals("*"))
+    {
+      int product = multiply(num1, num2);
+      MessageBox.showMessage("The product of your  numbers is:" + product);
+    }
+    else if (operator.equals("/"))
+    {
+      int quotient = divide(num1, num2);
+      if (quotient == -1) { return; }
+      MessageBox.showMessage("The quotient of your  numbers is:" + quotient);
+    }
+    else if (operator.equals("^"))
+    {
+      int answer = pow(num1, num2);
+      MessageBox.showMessage("The answer of your exponent is:" + answer);
+    }
+  }
+  public static int add(int n1, int n2)
+  {
+    return n1 + n2;
+  }
+  public static int subtract(int n1, int n2)
+  {
+    return n1 - n2;
+  }
+  public static int multiply(int n1, int n2)
+  {
+    return n1 * n2;
+  }
+  public static int divide(int n1, int n2)
+  {
+    if (n2 == 0)
+    {
+      MessageBox.showMessage("Error, Division by zero!");
+      return -1;
+    }
+    else
+      return n1 / n2;
+  }
+  public static int pow(int base, int exp)
+  {
+    int answer = 1;
+    for (int i = 0; i < exp; i++)
+    {
+      answer = answer * base;
+    }
+    return answer;
+  }
+}

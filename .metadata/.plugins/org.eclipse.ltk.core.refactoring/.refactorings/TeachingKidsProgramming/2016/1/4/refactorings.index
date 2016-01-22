@@ -1,0 +1,6 @@
+1453417189270	Extract method 'small'
+1453417222784	Extract method 'medium'
+1453417259748	Extract method 'large'
+1453417284946	Extract method 'moveTheLength'
+1453417317863	Extract method 'turnTheCorner'
+1453417655067	Extract method 'createAStitch'
